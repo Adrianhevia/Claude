@@ -1,10 +1,10 @@
 {
-  "handle": "@tu_usuario",
+  "handle": "@aheviadesign",
   "cover": {
     "kicker": "GTA VI",
-    "title": "Marcas de Leonida",
-    "subtitle": "…y a quién parodian",
-    "cta": "Desliza →"
+    "title": "Las marcas de GTA VI",
+    "script": "vs. la vida real",
+    "body": "Ocho marcas del juego y la marca real <b>a la que parodian.</b> ¿Las reconoces todas?"
   },
   "pairs": [
     {
@@ -12,7 +12,7 @@
       "real": "Arby's",
       "fakeLogo": "chaceys-vi.webp",
       "fakeShot": {
-        "pos": "center"
+        "pos": "0% 50%"
       },
       "realLogo": "arbys.svg",
       "color": "#d62828"
@@ -64,8 +64,8 @@
       "real": "Budweiser",
       "fakeLogo": "pisswasser-vi.webp",
       "fakeShot": {
-        "pos": "0% 0%",
-        "zoom": 1.9
+        "pos": "28% 8%",
+        "zoom": 1.8
       },
       "realLogo": "budweiser.svg",
       "color": "#b5121b"
@@ -77,5 +77,9 @@
       "realLogo": "dior.svg",
       "color": "#c9a96e"
     }
-  ]
+  ],
+  "outro": {
+    "title": "¿Cuál es tu favorita?",
+    "body": "¿Cuál es <b>la mejor parodia</b>? ¿Me he dejado alguna? Te leo en comentarios."
+  }
 }

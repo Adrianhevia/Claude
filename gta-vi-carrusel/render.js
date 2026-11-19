@@ -12,14 +12,13 @@ const toDataUri = f => {
   const mime = ext === 'svg' ? 'image/svg+xml' : ext === 'jpg' ? 'image/jpeg' : `image/${ext}`;
   return `data:${mime};base64,${fs.readFileSync(p).toString('base64')}`;
 };
-data._bg = toDataUri('../fondo.webp');
 data.pairs.forEach(p => { p._fakeSrc = toDataUri(p.fakeLogo); p._realSrc = toDataUri(p.realLogo); });
 
 (async () => {
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1080, height: 1350 } });
   fs.mkdirSync(path.join(dir, 'output'), { recursive: true });
-  const total = data.pairs.length + 1;
+  const total = data.pairs.length + 2;
   for (let i = 0; i < total; i++) {
     await page.addInitScript(`window.__DATA__=${JSON.stringify(data)};window.__INDEX__=${i};`);
     await page.goto('file://' + path.join(dir, 'template.html'), { waitUntil: 'networkidle' });
