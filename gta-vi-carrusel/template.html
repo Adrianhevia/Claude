@@ -2,64 +2,68 @@
 <html><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500;700;900&display=block" rel="stylesheet">
 <style>
-:root{--pink:#ff3d8b;--orange:#ff8a3d;--teal:#19d3c5;--night:#140a24;}
+:root{--plum:#6e3f7f;--plum-d:#4a2a5e;--lav:#8e97e6;--peach:#f7b27e;--rose:#e889a6;--cream:#fff4ea;}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{width:1080px;height:1350px;overflow:hidden;background:var(--night)}
-.slide{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:Inter,sans-serif;color:#fff;
-  background:radial-gradient(1200px 700px at 50% 110%,rgba(255,61,139,.55),transparent 60%),
-             radial-gradient(900px 600px at 100% 0%,rgba(25,211,197,.25),transparent 60%),
-             linear-gradient(180deg,#1b0d33 0%,#2a0f3d 55%,#3d1240 100%);}
-.grain{position:absolute;inset:0;opacity:.08;background-image:repeating-linear-gradient(0deg,#fff 0 1px,transparent 1px 3px)}
-.foot{position:absolute;left:64px;right:64px;bottom:48px;display:flex;justify-content:space-between;
-  font-weight:700;font-size:26px;letter-spacing:.04em;opacity:.8}
+html,body{width:1080px;height:1350px;overflow:hidden;background:var(--plum-d)}
+.slide{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:Inter,sans-serif;color:#fff;background:var(--plum-d)}
+.bg{position:absolute;inset:-8px;background-position:center;background-size:cover;background-repeat:no-repeat}
+.bg.pos-left{background-position:22% center}
+.bg.pos-right{background-position:78% center}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(74,42,94,.10) 0%,rgba(74,42,94,0) 40%,rgba(74,42,94,.55) 100%)}
+.foot{position:absolute;left:64px;right:64px;bottom:44px;display:flex;justify-content:space-between;z-index:6;
+  font-weight:700;font-size:26px;letter-spacing:.04em;text-shadow:0 2px 10px rgba(74,42,94,.6)}
 /* cover */
-.cover{display:flex;flex-direction:column;justify-content:center;padding:0 80px}
-.sun{position:absolute;width:760px;height:760px;border-radius:50%;left:50%;top:64%;transform:translate(-50%,-50%);
-  background:linear-gradient(180deg,#ffd23d 0%,var(--orange) 45%,var(--pink) 100%);
-  -webkit-mask:repeating-linear-gradient(180deg,#000 0 46px,transparent 46px 58px);mask:repeating-linear-gradient(180deg,#000 0 46px,transparent 46px 58px);opacity:.9}
-.palms{position:absolute;inset:auto 0 0 0;height:300px;background:linear-gradient(0deg,#0d0618 0%,transparent 100%)}
-.cover .txt{position:relative;z-index:2}
-.kicker{display:inline-block;font-family:Anton;font-size:64px;letter-spacing:.08em;padding:6px 22px;background:var(--teal);color:var(--night);transform:rotate(-3deg)}
-.title{font-family:Anton;font-size:190px;line-height:.92;text-transform:uppercase;margin-top:36px;text-shadow:0 10px 0 var(--pink),0 20px 40px rgba(0,0,0,.5)}
-.subtitle{font-size:56px;font-weight:900;margin-top:40px;color:#ffe3f0}
-.cta{position:absolute;right:64px;bottom:120px;z-index:2;font-family:Anton;font-size:54px;letter-spacing:.05em;color:#ffd23d}
+.cover .txt{position:absolute;left:72px;right:72px;top:150px;z-index:3}
+.kicker{display:inline-block;font-family:Anton;font-size:58px;letter-spacing:.08em;padding:6px 22px;background:var(--plum);color:var(--cream);border-radius:12px;transform:rotate(-3deg)}
+.title{font-family:Anton;font-size:178px;line-height:.92;text-transform:uppercase;margin-top:30px;color:var(--cream);
+  text-shadow:0 8px 0 var(--plum),0 18px 40px rgba(74,42,94,.45)}
+.subtitle{display:inline-block;font-size:50px;font-weight:900;margin-top:34px;color:var(--plum-d);background:var(--cream);padding:6px 20px;border-radius:12px}
+.cta{position:absolute;right:64px;bottom:118px;z-index:3;font-family:Anton;font-size:52px;letter-spacing:.05em;color:var(--cream);text-shadow:0 4px 0 var(--plum)}
 /* pair */
-.pair{padding:72px 64px 120px;display:flex;flex-direction:column;gap:28px}
-.card{flex:1;border-radius:36px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
-.card.fake{background:#fff;box-shadow:0 0 0 6px var(--pink),0 30px 60px rgba(0,0,0,.45)}
-.card.real{background:#f4f1ec;box-shadow:0 0 0 6px var(--teal),0 30px 60px rgba(0,0,0,.45)}
-.tag{position:absolute;z-index:2;top:24px;left:28px;font-family:Anton;font-size:34px;letter-spacing:.08em;padding:4px 16px;border-radius:10px;color:#fff}
-.fake .tag{background:var(--pink)} .real .tag{background:#0f8f86}
-.logo{max-width:78%;max-height:62%;object-fit:contain}
-.logo.cover{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;transform:scale(1.12)}
-.card:has(.logo.cover) .name{background:#fff;padding:4px 14px;border-radius:10px}
-.ph{font-family:Anton;font-size:150px;line-height:1;text-transform:uppercase;text-align:center;padding:0 30px;color:var(--c)}
-.name{position:absolute;z-index:2;top:28px;right:32px;font-weight:900;font-size:36px;color:#1b0d33;letter-spacing:.01em}
-.vs{position:absolute;left:50%;top:calc(72px + (1350px - 72px - 120px)/2);transform:translate(-50%,-50%) rotate(-6deg);z-index:5;
-  font-family:Anton;font-size:72px;background:#ffd23d;color:var(--night);padding:2px 30px;border-radius:14px;box-shadow:0 10px 0 var(--night)}
+.pair .stack{position:absolute;inset:64px 60px 112px;display:flex;flex-direction:column;gap:26px;z-index:3}
+.card{flex:1;border-radius:34px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  background:rgba(255,248,242,.94);box-shadow:0 24px 50px rgba(74,42,94,.35)}
+.card.fake{outline:6px solid var(--plum);outline-offset:-6px}
+.card.real{outline:6px solid var(--lav);outline-offset:-6px}
+.tag{position:absolute;top:26px;left:28px;z-index:2;font-family:Anton;font-size:32px;letter-spacing:.08em;padding:4px 16px;border-radius:10px;color:#fff}
+.fake .tag{background:var(--plum)} .real .tag{background:#6f79d6}
+.name{position:absolute;top:26px;right:28px;z-index:2;font-weight:900;font-size:34px;color:var(--plum-d);background:rgba(255,248,242,.92);padding:3px 14px;border-radius:10px}
+.logo{max-width:76%;max-height:60%;object-fit:contain}
+.shot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph{font-family:Anton;font-size:140px;line-height:1;text-transform:uppercase;text-align:center;padding:0 30px;color:var(--c)}
+.vs{position:absolute;left:50%;top:calc(64px + (1350px - 64px - 112px)/2);transform:translate(-50%,-50%) rotate(-6deg);z-index:5;
+  font-family:Anton;font-size:68px;background:var(--peach);color:var(--plum-d);padding:2px 30px;border-radius:14px;box-shadow:0 8px 0 var(--plum)}
 </style></head>
 <body><div id="root"></div>
 <script>
 const data = window.__DATA__, i = window.__INDEX__, total = data.pairs.length + 1;
+document.head.insertAdjacentHTML('beforeend', `<style>.bg{background-image:url(${data._bg})}</style>`);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const num = n => String(n).padStart(2,'0');
-const logo = (src, label, color, fit) => src
-  ? `<img class="logo ${fit||''}" src="${src}">`
-  : `<div class="ph" style="--c:${color}">${esc(label)}</div>`;
+// media: logo centrado, o captura a sangre (shot) con encuadre/zoom opcionales
+const media = (src, label, color, shot) => {
+  if (!src) return `<div class="ph" style="--c:${color}">${esc(label)}</div>`;
+  if (shot) {
+    const pos = shot.pos || 'center', zoom = shot.zoom || 1;
+    return `<img class="shot" src="${src}" style="object-position:${pos};transform:scale(${zoom});transform-origin:${pos}">`;
+  }
+  return `<img class="logo" src="${src}">`;
+};
 let html;
+const foot = `<div class="foot"><span>${esc(data.handle)}</span><span>${num(i+1)}/${num(total)}</span></div>`;
 if (i === 0) {
   const c = data.cover;
-  html = `<section class="slide cover"><div class="sun"></div><div class="palms"></div><div class="grain"></div>
+  html = `<section class="slide cover"><div class="bg pos-right"></div><div class="shade"></div>
     <div class="txt"><span class="kicker">${esc(c.kicker)}</span><h1 class="title">${esc(c.title)}</h1><p class="subtitle">${esc(c.subtitle)}</p></div>
-    <div class="cta">${esc(c.cta)}</div>
-    <div class="foot"><span>${esc(data.handle)}</span><span>${num(1)}/${num(total)}</span></div></section>`;
+    <div class="cta">${esc(c.cta)}</div>${foot}</section>`;
 } else {
   const p = data.pairs[i-1];
-  html = `<section class="slide pair"><div class="grain"></div>
-    <div class="card fake"><span class="tag">GTA VI</span>${logo(p._fakeSrc, p.fake, p.color, p.fakeFit)}${p._fakeSrc?`<span class="name">${esc(p.fake)}</span>`:''}</div>
-    <div class="card real"><span class="tag">VIDA REAL</span>${logo(p._realSrc, p.real, '#1b0d33', p.realFit)}${p._realSrc?`<span class="name">${esc(p.real)}</span>`:''}</div>
-    <div class="vs">VS</div>
-    <div class="foot"><span>${esc(data.handle)}</span><span>${num(i+1)}/${num(total)}</span></div></section>`;
+  html = `<section class="slide pair"><div class="bg ${i%2?'pos-left':'pos-right'}"></div><div class="shade"></div>
+    <div class="stack">
+      <div class="card fake"><span class="tag">GTA VI</span><span class="name">${esc(p.fake)}</span>${media(p._fakeSrc, p.fake, p.color, p.fakeShot)}</div>
+      <div class="card real"><span class="tag">VIDA REAL</span><span class="name">${esc(p.real)}</span>${media(p._realSrc, p.real, '#4a2a5e', p.realShot)}</div>
+    </div>
+    <div class="vs">VS</div>${foot}</section>`;
 }
 document.getElementById('root').innerHTML = html;
 </script></body></html>

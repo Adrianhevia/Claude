@@ -12,6 +12,7 @@ const toDataUri = f => {
   const mime = ext === 'svg' ? 'image/svg+xml' : ext === 'jpg' ? 'image/jpeg' : `image/${ext}`;
   return `data:${mime};base64,${fs.readFileSync(p).toString('base64')}`;
 };
+data._bg = toDataUri('../fondo.webp');
 data.pairs.forEach(p => { p._fakeSrc = toDataUri(p.fakeLogo); p._realSrc = toDataUri(p.realLogo); });
 
 (async () => {

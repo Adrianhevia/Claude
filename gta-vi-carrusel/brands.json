@@ -8,9 +8,22 @@
   },
   "pairs": [
     {
+      "fake": "Chacey's",
+      "real": "Arby's",
+      "fakeLogo": "chaceys-vi.webp",
+      "fakeShot": {
+        "pos": "center"
+      },
+      "realLogo": "arbys.svg",
+      "color": "#d62828"
+    },
+    {
       "fake": "eCola",
       "real": "Coca-Cola",
-      "fakeLogo": "ecola.webp",
+      "fakeLogo": "ecola-vi.webp",
+      "fakeShot": {
+        "pos": "center"
+      },
       "realLogo": "cocacola.svg",
       "color": "#e10600"
     },
@@ -24,8 +37,11 @@
     {
       "fake": "FizzAzz",
       "real": "Fanta",
-      "fakeLogo": "fizzazz.webp",
-      "fakeFit": "cover",
+      "fakeLogo": "fizzazz-vi.webp",
+      "fakeShot": {
+        "pos": "center",
+        "zoom": 1.12
+      },
       "realLogo": "fanta.svg",
       "color": "#ff7a00"
     },
@@ -46,7 +62,11 @@
     {
       "fake": "Pißwasser",
       "real": "Budweiser",
-      "fakeLogo": "pisswasser.webp",
+      "fakeLogo": "pisswasser-vi.webp",
+      "fakeShot": {
+        "pos": "0% 0%",
+        "zoom": 1.9
+      },
       "realLogo": "budweiser.svg",
       "color": "#b5121b"
     },
