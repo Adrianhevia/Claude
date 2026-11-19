@@ -7,15 +7,55 @@
     "cta": "Desliza →"
   },
   "pairs": [
-    { "fake": "Chacey's",     "real": "Arby's",     "fakeLogo": "chaceys.png",    "realLogo": "arbys.png",     "color": "#d62828" },
-    { "fake": "eCola",        "real": "Coca-Cola",  "fakeLogo": "ecola.png",      "realLogo": "cocacola.png",  "color": "#e10600" },
-    { "fake": "Sprunk",       "real": "Sprite",     "fakeLogo": "sprunk.png",     "realLogo": "sprite.png",    "color": "#1fa34a" },
-    { "fake": "FizzAzz",      "real": "Fanta",      "fakeLogo": "fizzazz.png",    "realLogo": "fanta.png",     "color": "#ff7a00" },
-    { "fake": "Burger Shot",  "real": "Burger King","fakeLogo": "burgershot.png", "realLogo": "burgerking.png","color": "#f2a900" },
-    { "fake": "Cluckin' Bell","real": "Taco Bell",  "fakeLogo": "cluckinbell.png","realLogo": "tacobell.png",  "color": "#7b2cbf" },
-    { "fake": "Pißwasser",    "real": "Budweiser",  "fakeLogo": "pisswasser.png", "realLogo": "budweiser.png", "color": "#b5121b" },
-    { "fake": "iFruit",       "real": "Apple",      "fakeLogo": "ifruit.png",     "realLogo": "apple.png",     "color": "#8e8e93" },
-    { "fake": "Ryde Me",      "real": "Uber",       "fakeLogo": "rydeme.png",     "realLogo": "uber.png",      "color": "#111111" },
-    { "fake": "Dix",          "real": "Dior",       "fakeLogo": "dix.png",        "realLogo": "dior.png",      "color": "#c9a96e" }
+    {
+      "fake": "eCola",
+      "real": "Coca-Cola",
+      "fakeLogo": "ecola.webp",
+      "realLogo": "cocacola.svg",
+      "color": "#e10600"
+    },
+    {
+      "fake": "Sprunk",
+      "real": "Sprite",
+      "fakeLogo": "sprunk.webp",
+      "realLogo": "sprite.svg",
+      "color": "#1fa34a"
+    },
+    {
+      "fake": "FizzAzz",
+      "real": "Fanta",
+      "fakeLogo": "fizzazz.webp",
+      "fakeFit": "cover",
+      "realLogo": "fanta.svg",
+      "color": "#ff7a00"
+    },
+    {
+      "fake": "Burger Shot",
+      "real": "Burger King",
+      "fakeLogo": "burgershot.svg",
+      "realLogo": "burgerking.svg",
+      "color": "#f2a900"
+    },
+    {
+      "fake": "Cluckin' Bell",
+      "real": "Taco Bell",
+      "fakeLogo": "cluckinbell.webp",
+      "realLogo": "tacobell.svg",
+      "color": "#7b2cbf"
+    },
+    {
+      "fake": "Pißwasser",
+      "real": "Budweiser",
+      "fakeLogo": "pisswasser.webp",
+      "realLogo": "budweiser.svg",
+      "color": "#b5121b"
+    },
+    {
+      "fake": "Dix",
+      "real": "Dior",
+      "fakeLogo": "dix.webp",
+      "realLogo": "dior.svg",
+      "color": "#c9a96e"
+    }
   ]
 }
