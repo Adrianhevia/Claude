@@ -3,15 +3,16 @@
   "cover": {
     "title": "Las marcas de GTA VI",
     "script": "vs. la vida real",
-    "body": "Once marcas del juego y la marca real <b>a la que parodian.</b> ¿Las reconoces todas?"
+    "body": "Doce marcas del juego y la marca real <b>a la que parodian.</b> ¿Las reconoces todas?"
   },
   "pairs": [
     {
       "fake": "eCola",
       "real": "Coca-Cola",
-      "fakeLogo": "ecola-vi.webp",
+      "fakeLogo": "ecola-vi.jpg",
       "fakeShot": {
-        "pos": "center"
+        "pos": "51% 58%",
+        "zoom": 1.45
       },
       "realLogo": "cocacola.svg",
       "color": "#e10600"
@@ -26,10 +27,10 @@
     {
       "fake": "FizzAzz",
       "real": "Fanta",
-      "fakeLogo": "fizzazz-vi.webp",
+      "fakeLogo": "fizzazz-vi.jpg",
       "fakeShot": {
-        "pos": "center",
-        "zoom": 1.12
+        "pos": "49% 49%",
+        "zoom": 2.0
       },
       "realLogo": "fanta.svg",
       "color": "#ff7a00"
@@ -60,6 +61,16 @@
       "color": "#b5121b"
     },
     {
+      "fake": "Grotti",
+      "real": "Ferrari",
+      "fakeLogo": "grotti-vi.jpg",
+      "fakeShot": {
+        "pos": "30% 70%"
+      },
+      "realLogo": "ferrari.svg",
+      "color": "#DA291C"
+    },
+    {
       "fake": "Obey",
       "real": "Audi",
       "fakeLogo": "obey-vi.webp",
@@ -81,14 +92,14 @@
       "color": "#0066B1"
     },
     {
-      "fake": "Declasse",
-      "real": "Chevrolet",
-      "fakeLogo": "declasse-vi.webp",
+      "fake": "Vapid",
+      "real": "Ford",
+      "fakeLogo": "vapid-vi.jpg",
       "fakeShot": {
-        "pos": "50% 60%"
+        "pos": "45% 60%"
       },
-      "realLogo": "chevrolet.svg",
-      "color": "#CD9834"
+      "realLogo": "ford.svg",
+      "color": "#003478"
     },
     {
       "fake": "Dix",
