@@ -108,7 +108,7 @@ const clouds = () => `
 const media = (src, label, shot, cls='') => {
   if (!src) return `<div style="font-weight:900;font-size:60px;text-align:center">${esc(label)}</div>`;
   if (shot) { const pos = shot.pos||'center', z = shot.zoom||1;
-    return `<img class="shot" src="${src}" style="object-position:${pos};transform:scale(${z});transform-origin:${pos};${shot.filter?`filter:${shot.filter}`:""}">`; }
+    return `<img class="shot" src="${src}" style="object-fit:${shot.fit||"cover"};background:${shot.bg||"transparent"};object-position:${pos};transform:scale(${z});transform-origin:${pos};${shot.filter?`filter:${shot.filter}`:""}">`; }
   return `<img class="logo" src="${src}">`;
 };
 const card = ({x,y,w,h,rot,src,label,shot,badge,badgePos}) => `

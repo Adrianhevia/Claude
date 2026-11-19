@@ -3,7 +3,7 @@
   "cover": {
     "title": "Las marcas de GTA VI",
     "script": "vs. la vida real",
-    "body": "Doce marcas del juego y la marca real <b>a la que parodian.</b> ¿Las reconoces todas?"
+    "body": "Once marcas del juego y la marca real <b>a la que parodian.</b> ¿Las reconoces todas?"
   },
   "pairs": [
     {
@@ -20,9 +20,14 @@
     {
       "fake": "Sprunk",
       "real": "Sprite",
-      "fakeLogo": "sprunk.webp",
+      "fakeLogo": "sprunk-vi.jpg",
       "realLogo": "sprite.svg",
-      "color": "#1fa34a"
+      "color": "#1fa34a",
+      "fakeShot": {
+        "pos": "30% 70%",
+        "zoom": 1.0,
+        "filter": "brightness(1.5) contrast(1.05) saturate(1.1)"
+      }
     },
     {
       "fake": "FizzAzz",
@@ -52,10 +57,9 @@
     {
       "fake": "Pißwasser",
       "real": "Budweiser",
-      "fakeLogo": "pisswasser-vi.webp",
+      "fakeLogo": "pisswasser-label.jpg",
       "fakeShot": {
-        "pos": "28% 8%",
-        "zoom": 1.8
+        "pos": "center"
       },
       "realLogo": "budweiser.svg",
       "color": "#b5121b"
@@ -104,19 +108,13 @@
     {
       "fake": "Dix",
       "real": "Dior",
-      "fakeLogo": "dix.webp",
+      "fakeLogo": "dix-vi.jpg",
       "realLogo": "dior.svg",
-      "color": "#c9a96e"
-    },
-    {
-      "fake": "Chacey's",
-      "real": "Arby's",
-      "fakeLogo": "chaceys-vi.webp",
+      "color": "#c9a96e",
       "fakeShot": {
-        "pos": "0% 50%"
-      },
-      "realLogo": "arbys.svg",
-      "color": "#d62828"
+        "pos": "50% 42%",
+        "zoom": 1.0
+      }
     }
   ],
   "outro": {
