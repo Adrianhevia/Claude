@@ -60,34 +60,35 @@
       "color": "#b5121b"
     },
     {
-      "fake": "Grotti",
-      "real": "Ferrari",
-      "fakeLogo": "grotti-vi.webp",
-      "realLogo": "ferrari.svg",
-      "color": "#DA291C",
+      "fake": "Obey",
+      "real": "Audi",
+      "fakeLogo": "obey-vi.webp",
       "fakeShot": {
-        "pos": "30% 60%"
-      }
+        "pos": "50% 55%"
+      },
+      "realLogo": "audi.svg",
+      "color": "#BB0A30"
     },
     {
-      "fake": "Pegassi",
-      "real": "Lamborghini",
-      "fakeLogo": "pegassi-vi.webp",
-      "realLogo": "lamborghini.svg",
-      "color": "#B6A272",
+      "fake": "Übermacht",
+      "real": "BMW",
+      "fakeLogo": "ubermacht-vi.webp",
       "fakeShot": {
-        "pos": "45% 60%"
-      }
+        "pos": "40% 60%",
+        "filter": "brightness(1.45) contrast(1.05)"
+      },
+      "realLogo": "bmw.svg",
+      "color": "#0066B1"
     },
     {
-      "fake": "Vapid",
-      "real": "Ford",
-      "fakeLogo": "vapid-vi.webp",
-      "realLogo": "ford.svg",
-      "color": "#003478",
+      "fake": "Declasse",
+      "real": "Chevrolet",
+      "fakeLogo": "declasse-vi.webp",
       "fakeShot": {
-        "pos": "55% 60%"
-      }
+        "pos": "50% 60%"
+      },
+      "realLogo": "chevrolet.svg",
+      "color": "#CD9834"
     },
     {
       "fake": "Dix",
