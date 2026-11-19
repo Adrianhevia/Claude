@@ -93,8 +93,10 @@ function frond(L, ang){
 function palm({x, y, h, flip=false, lean=0, op=.55}){
   const cx = 200 + lean, cy = 120;
   const trunk = `M${190},${h} Q${200+lean*0.2},${(h+cy)/2} ${cx-6},${cy} L${cx+6},${cy} Q${214+lean*0.2},${(h+cy)/2} ${214},${h}Z`;
-  const angs = [-170,-140,-112,-80,-48,-18,12,40,-200];
-  const fr = angs.map((a,k)=>frond(k%2?250:290, a)).join('');
+  // hojas espejadas a cada lado (no rotadas 180°) para que siempre caigan hacia abajo
+  const spec = [[-62,210],[-38,265],[-14,295],[10,280],[34,240],[56,190]];
+  const fr = spec.map(([a,l])=>frond(l,a)).join('') +
+    `<g transform="scale(-1,1)">${spec.map(([a,l],k)=>frond(l*(k%2?0.95:1.05),a+4)).join('')}</g>`;
   return `<svg class="palm" style="left:${x}px;top:${y}px;width:400px;height:${h}px;opacity:${op};transform:${flip?'scaleX(-1)':''};z-index:1"
     viewBox="0 0 400 ${h}" overflow="visible"><path d="${trunk}"/><g transform="translate(${cx},${cy})">${fr}</g></svg>`;
 }

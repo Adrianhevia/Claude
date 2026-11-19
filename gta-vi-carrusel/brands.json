@@ -62,23 +62,32 @@
     {
       "fake": "Grotti",
       "real": "Ferrari",
-      "fakeLogo": "grotti.webp",
+      "fakeLogo": "grotti-vi.webp",
       "realLogo": "ferrari.svg",
-      "color": "#DA291C"
+      "color": "#DA291C",
+      "fakeShot": {
+        "pos": "30% 60%"
+      }
     },
     {
       "fake": "Pegassi",
       "real": "Lamborghini",
-      "fakeLogo": "pegassi.webp",
+      "fakeLogo": "pegassi-vi.webp",
       "realLogo": "lamborghini.svg",
-      "color": "#B6A272"
+      "color": "#B6A272",
+      "fakeShot": {
+        "pos": "45% 60%"
+      }
     },
     {
       "fake": "Vapid",
       "real": "Ford",
-      "fakeLogo": "vapid.webp",
+      "fakeLogo": "vapid-vi.webp",
       "realLogo": "ford.svg",
-      "color": "#003478"
+      "color": "#003478",
+      "fakeShot": {
+        "pos": "55% 60%"
+      }
     },
     {
       "fake": "Dix",
@@ -100,7 +109,6 @@
   ],
   "outro": {
     "title": "¿Cuál es tu favorita?",
-    "body": "¿Cuál es <b>la mejor parodia</b>? ¿Me he dejado alguna? Te leo en comentarios.",
-    "logo": "gtavi.webp"
+    "body": "¿Cuál es <b>la mejor parodia</b>? ¿Me he dejado alguna? Te leo en comentarios."
   }
 }
