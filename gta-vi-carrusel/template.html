@@ -1,0 +1,63 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500;700;900&display=block" rel="stylesheet">
+<style>
+:root{--pink:#ff3d8b;--orange:#ff8a3d;--teal:#19d3c5;--night:#140a24;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden;background:var(--night)}
+.slide{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:Inter,sans-serif;color:#fff;
+  background:radial-gradient(1200px 700px at 50% 110%,rgba(255,61,139,.55),transparent 60%),
+             radial-gradient(900px 600px at 100% 0%,rgba(25,211,197,.25),transparent 60%),
+             linear-gradient(180deg,#1b0d33 0%,#2a0f3d 55%,#3d1240 100%);}
+.grain{position:absolute;inset:0;opacity:.08;background-image:repeating-linear-gradient(0deg,#fff 0 1px,transparent 1px 3px)}
+.foot{position:absolute;left:64px;right:64px;bottom:48px;display:flex;justify-content:space-between;
+  font-weight:700;font-size:26px;letter-spacing:.04em;opacity:.8}
+/* cover */
+.cover{display:flex;flex-direction:column;justify-content:center;padding:0 80px}
+.sun{position:absolute;width:760px;height:760px;border-radius:50%;left:50%;top:64%;transform:translate(-50%,-50%);
+  background:linear-gradient(180deg,#ffd23d 0%,var(--orange) 45%,var(--pink) 100%);
+  -webkit-mask:repeating-linear-gradient(180deg,#000 0 46px,transparent 46px 58px);mask:repeating-linear-gradient(180deg,#000 0 46px,transparent 46px 58px);opacity:.9}
+.palms{position:absolute;inset:auto 0 0 0;height:300px;background:linear-gradient(0deg,#0d0618 0%,transparent 100%)}
+.cover .txt{position:relative;z-index:2}
+.kicker{display:inline-block;font-family:Anton;font-size:64px;letter-spacing:.08em;padding:6px 22px;background:var(--teal);color:var(--night);transform:rotate(-3deg)}
+.title{font-family:Anton;font-size:190px;line-height:.92;text-transform:uppercase;margin-top:36px;text-shadow:0 10px 0 var(--pink),0 20px 40px rgba(0,0,0,.5)}
+.subtitle{font-size:56px;font-weight:900;margin-top:40px;color:#ffe3f0}
+.cta{position:absolute;right:64px;bottom:120px;z-index:2;font-family:Anton;font-size:54px;letter-spacing:.05em;color:#ffd23d}
+/* pair */
+.pair{padding:72px 64px 120px;display:flex;flex-direction:column;gap:28px}
+.card{flex:1;border-radius:36px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
+.card.fake{background:#fff;box-shadow:0 0 0 6px var(--pink),0 30px 60px rgba(0,0,0,.45)}
+.card.real{background:#f4f1ec;box-shadow:0 0 0 6px var(--teal),0 30px 60px rgba(0,0,0,.45)}
+.tag{position:absolute;top:24px;left:28px;font-family:Anton;font-size:34px;letter-spacing:.08em;padding:4px 16px;border-radius:10px;color:#fff}
+.fake .tag{background:var(--pink)} .real .tag{background:#0f8f86}
+.logo{max-width:78%;max-height:62%;object-fit:contain}
+.ph{font-family:Anton;font-size:150px;line-height:1;text-transform:uppercase;text-align:center;padding:0 30px;color:var(--c)}
+.name{position:absolute;top:28px;right:32px;font-weight:900;font-size:36px;color:#1b0d33;letter-spacing:.01em}
+.vs{position:absolute;left:50%;top:calc(72px + (1350px - 72px - 120px)/2);transform:translate(-50%,-50%) rotate(-6deg);z-index:5;
+  font-family:Anton;font-size:72px;background:#ffd23d;color:var(--night);padding:2px 30px;border-radius:14px;box-shadow:0 10px 0 var(--night)}
+</style></head>
+<body><div id="root"></div>
+<script>
+const data = window.__DATA__, i = window.__INDEX__, total = data.pairs.length + 1;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const num = n => String(n).padStart(2,'0');
+const logo = (src, label, color) => src
+  ? `<img class="logo" src="${src}">`
+  : `<div class="ph" style="--c:${color}">${esc(label)}</div>`;
+let html;
+if (i === 0) {
+  const c = data.cover;
+  html = `<section class="slide cover"><div class="sun"></div><div class="palms"></div><div class="grain"></div>
+    <div class="txt"><span class="kicker">${esc(c.kicker)}</span><h1 class="title">${esc(c.title)}</h1><p class="subtitle">${esc(c.subtitle)}</p></div>
+    <div class="cta">${esc(c.cta)}</div>
+    <div class="foot"><span>${esc(data.handle)}</span><span>${num(1)}/${num(total)}</span></div></section>`;
+} else {
+  const p = data.pairs[i-1];
+  html = `<section class="slide pair"><div class="grain"></div>
+    <div class="card fake"><span class="tag">GTA VI</span>${logo(p._fakeSrc, p.fake, p.color)}${p._fakeSrc?`<span class="name">${esc(p.fake)}</span>`:''}</div>
+    <div class="card real"><span class="tag">VIDA REAL</span>${logo(p._realSrc, p.real, '#1b0d33')}${p._realSrc?`<span class="name">${esc(p.real)}</span>`:''}</div>
+    <div class="vs">VS</div>
+    <div class="foot"><span>${esc(data.handle)}</span><span>${num(i+1)}/${num(total)}</span></div></section>`;
+}
+document.getElementById('root').innerHTML = html;
+</script></body></html>
