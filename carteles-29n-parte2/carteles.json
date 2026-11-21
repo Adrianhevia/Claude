@@ -1,0 +1,73 @@
+{
+  "handle": "@aheviadesign",
+  "cover": {
+    "kicker": "Elecciones",
+    "kickerAccent": "29N",
+    "title": "Carteles electorales",
+    "script": "a examen",
+    "part": "Parte 2",
+    "body": "Seis partidos más, seis carteles más. Te cuento <b>cuáles funcionan, cuáles no y por qué.</b>",
+    "collage": [
+      "coalicion-canaria.png",
+      "alvise.png",
+      "compromis.png"
+    ]
+  },
+  "items": [
+    {
+      "party": "BNG",
+      "img": "bng.png",
+      "tag": "Descompensado",
+      "claim": "Agora con máis forza!",
+      "text": "La composición tipográfica funciona y la foto de grupo sobre el azul tiene fuerza. Pero el conjunto no termina de estar equilibrado: <b>el logo es enorme y se queda flotando en medio de la nada.</b>",
+      "thumbPos": "50% 80%"
+    },
+    {
+      "party": "Coalición Canaria",
+      "img": "coalicion-canaria.png",
+      "tag": "Mejorable",
+      "claim": "Defiende Canarias",
+      "text": "Tiran de los colores de Canarias, con versiones en amarillo, azul y blanco, y el retrato en blanco y negro sobre color plano funciona. Lo que sobra: <b>las pastillas detrás de los textos y una textura topográfica que no aporta nada.</b>",
+      "short": "C. Canaria",
+      "thumbPos": "50% 40%"
+    },
+    {
+      "party": "Compromís",
+      "img": "compromis.png",
+      "tag": "Confuso",
+      "claim": "És el vot que no et fallarà",
+      "text": "Hacerlo todo vectorial, sin una sola foto, es buena idea. La solución, no tanto: <b>la tipografía no es especialmente legible y la composición tipográfica es extraña.</b>",
+      "thumbPos": "50% 55%"
+    },
+    {
+      "party": "Drago Canarias",
+      "img": "drago.png",
+      "tag": "Pastiche",
+      "claim": "La esperanza vence al miedo",
+      "text": "<b>Un pastiche de tipografías con pura estética de IA.</b> La iluminación de cada foto va por su lado y el desenfoque del fondo es tan bestia que no aporta nada.",
+      "short": "Drago",
+      "thumbPos": "50% 45%"
+    },
+    {
+      "party": "PACMA",
+      "img": "pacma.png",
+      "tag": "Mesiánico",
+      "claim": "Vota por lo que crees",
+      "text": "Mano tendida a cámara, pañuelo verde y un mar de puños delante del Congreso. <b>Parece el cartel de una secta: únete a nosoootros.</b>",
+      "thumbPos": "50% 40%"
+    },
+    {
+      "party": "Se Acabó La Fiesta",
+      "img": "alvise.png",
+      "tag": "Pedigüeño",
+      "claim": "La ilusión de un país",
+      "text": "Retrato de perfil sobre negro y titular en dorado para vender ilusión. Pero lee la franja de abajo: <b>por supuesto no pide el voto, pide perras.</b>",
+      "short": "SALF",
+      "thumbPos": "50% 35%"
+    }
+  ],
+  "outro": {
+    "title": "¿Y tú qué opinas?",
+    "body": "¿Cuál te parece <b>el mejor cartel</b>? ¿Y el peor? Te leo en comentarios."
+  }
+}
