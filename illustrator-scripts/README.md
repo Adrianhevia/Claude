@@ -24,3 +24,13 @@ Divide el documento activo en archivos `.ai` independientes, cada uno con un gru
 - El documento tiene que estar guardado como `.ai`. Si tiene cambios sin guardar, el script ofrece guardarlo primero.
 - Un objeto que ocupe mesas de dos grupos distintos se conserva en ambos archivos.
 - Las mesas conservan su posición original en el lienzo.
+
+## DuplicarArchivo.jsx
+
+Genera N copias exactas del documento activo como archivos `.ai` independientes con numeración secuencial.
+
+**Uso:** abre el `.ai` y ve a *Archivo > Secuencias de comandos > Otra secuencia de comandos…*, luego elige `DuplicarArchivo.jsx`.
+
+**Opciones del diálogo:** número de copias (5 por defecto), nombre base, numeración como sufijo o prefijo, separador, número inicial, dígitos y carpeta de destino. Incluye vista previa de los nombres.
+
+**Cómo funciona:** copia el archivo guardado en disco, así que las copias son idénticas al original y el proceso es inmediato. Si el documento tiene cambios sin guardar, ofrece guardarlo primero. Pide confirmación antes de sobrescribir archivos existentes y no permite que una copia se llame igual que el original.
